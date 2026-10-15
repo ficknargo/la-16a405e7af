@@ -39,11 +39,6 @@ section.drop{max-width:none;padding:0;margin:0;overflow:hidden}
 .corner i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--acc);margin-right:.5rem;animation:blink 1.6s steps(2) infinite}
 @keyframes blink{50%{opacity:.15}}
 
-.marquee{background:var(--acc);color:#000;overflow:hidden;white-space:nowrap;border-block:2px solid #000;position:relative;z-index:2}
-.marquee .track{display:inline-flex;animation:mq 34s linear infinite;padding:.7rem 0}
-.marquee span{font-family:'Archivo Black';text-transform:uppercase;letter-spacing:.2em;font-size:.82rem;padding-right:2.2rem}
-.marquee span::after{content:"\2731";margin-left:2.2rem}
-@keyframes mq{to{transform:translateX(-50%)}}
 
 /* ===== buy ===== */
 .buy{background:#000}
