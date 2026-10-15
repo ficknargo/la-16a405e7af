@@ -29,12 +29,12 @@ section.drop{max-width:none;padding:0;margin:0;overflow:hidden}
 .drop-hero h2{font-size:clamp(4rem,19vw,11rem);line-height:.82;margin:0 0 1.2rem;letter-spacing:-.02em}
 .drop-hero h2 .outline{-webkit-text-stroke:2px #fff;white-space:nowrap}
 .dh-line{font-size:clamp(1.05rem,2.6vw,1.5rem);font-weight:600;max-width:520px;margin:0 0 1.2rem;color:#fff;line-height:1.35}
-.dh-meta{list-style:none;display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1.6rem;padding:0;font-family:var(--mono);font-size:.78rem;letter-spacing:.14em}
+.dh-meta{text-transform:uppercase;list-style:none;display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1.6rem;padding:0;font-family:var(--mono);font-size:.78rem;letter-spacing:.14em}
 .dh-meta li{border:1px solid #ffffff66;padding:.25rem .6rem;background:#0008;backdrop-filter:blur(4px)}
 .dh-meta li:first-child{border-color:var(--acc);color:var(--acc)}
 .dh-cta .btn{margin-left:0;margin-right:.6rem}
 .dh-price{display:inline-block;margin-left:.2rem;font-family:'Archivo Black'}
-.corner{position:absolute;z-index:2;font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;color:#ffffffb0;pointer-events:none}
+.corner{text-transform:uppercase;position:absolute;z-index:2;font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;color:#ffffffb0;pointer-events:none}
 .corner.tr{top:1.1rem;right:5vw;text-align:right}.corner.tl{top:1.1rem;left:5vw}
 .corner i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--acc);margin-right:.5rem;animation:blink 1.6s steps(2) infinite}
 @keyframes blink{50%{opacity:.15}}

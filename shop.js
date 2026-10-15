@@ -97,7 +97,7 @@
         window.location.href = 'https://' + C.storeDomain + '/cart/' + state.lines.map(function (l) { return l.vid + ':' + l.qty; }).join(',');
       } else {
         var n = count();
-        toast('PREVIEW — checkout isn\u2019t connected yet. This would open Shopify checkout for ' + n + ' item' + (n === 1 ? '' : 's') + ' (' + money(subtotal()) + ').', 5200);
+        toast('Preview only. Checkout opens here once this is approved.', 4200);
       }
     }
   };
@@ -174,7 +174,7 @@
     if (e.target.closest('[data-inc]')) p = api.setQty(key, Math.min(99, q + 1));
     else if (e.target.closest('[data-dec]')) p = q <= 1 ? api.remove(key) : api.setQty(key, q - 1);
     else if (e.target.closest('[data-rm]')) p = api.remove(key);
-    if (p) p.then(render).catch(function () { toast('Couldn\u2019t update the cart. Try again.'); });
+    if (p) p.then(render).catch(function () { toast('Didn\u2019t go through. Try again.'); });
   });
   $('#checkout').addEventListener('click', function () { api.checkout(); });
   $('#demo-banner').hidden = MODE !== 'demo';
@@ -184,7 +184,7 @@
     state.size = s;
     $$('input[name=size]').forEach(function (i) { i.checked = i.value === s; });
     $$('.sb-sizes button').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.size === s); b.classList.toggle('on', b.dataset.size === s); });
-    $('#size-note').textContent = s ? 'Black / ' + s + ' \u2014 in the queue for printing.' : '';
+    $('#size-note').textContent = s ? 'Black / ' + s + '. Good call. Probably.' : '';
     $$('.sizes, .sb-sizes').forEach(function (e) { e.classList.remove('need'); });
   }
   function needSize() {
@@ -201,7 +201,7 @@
     if (!state.size) return needSize();
     busy(true);
     api.add(state.size, state.qty).then(function () { render(); busy(false); openCart(); })
-      .catch(function (e) { console.warn('[shop]', e); busy(false); toast('Couldn\u2019t reach the store. Try again in a sec.'); });
+      .catch(function (e) { console.warn('[shop]', e); busy(false); toast('Didn\u2019t go through. Try again.'); });
   }
   $$('.atc, .sb-add').forEach(function (b) { b.addEventListener('click', add); });
 
