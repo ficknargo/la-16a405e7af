@@ -181,3 +181,15 @@ details.acc p{margin:0 0 1rem;color:#cfcfcf;font-size:.92rem}
 @media(prefers-reduced-motion:reduce){
   html.js .rv{opacity:1;transform:none}.drawer,.overlay,.sbar,#toast{transition:none}.dh-img img{animation:none;transform:none}.scan{display:none}.stage{scroll-behavior:auto}
 }
+
+/* nav fit on phones: logo + Play the Game + Join + Cart on one row */
+@media(max-width:760px){
+  nav{padding:.6rem 4vw;gap:.5rem;flex-wrap:nowrap}
+  nav img{height:27px}
+  nav .links{display:flex;align-items:center;white-space:nowrap}
+  nav .links a.cta,nav .links a.play-link,nav .links .cartbtn{margin-left:.5rem}
+  nav .links a.cta{font-size:.72rem;letter-spacing:.08em}
+  nav .links a.play-link{font-size:.62rem!important;padding:.1rem .5rem}
+  nav .links .cartbtn{padding:.28rem .6rem;font-size:.62rem;letter-spacing:.08em}
+  nav .links .cartbtn .cc{margin-left:.3rem}
+}
